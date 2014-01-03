@@ -1,0 +1,35 @@
+/* Detail Box Begin */
+.detail-pro-box { width:960px; margin:0 auto 30px; *zoom:1; }
+.detail-pro-box:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.detail-pic-box, .detail-info-box, .detail-shop-box { float:left; height:380px; background-color:#FFF; }
+/*=s pic */
+	.detail-pic-box { position:relative; width:430px; margin-right:20px; }
+	.detail-pic-box .icon-mark { position:absolute; right:20px; top:20px; }
+	.detail-pic-box .big-pic { width:260px; height:260px; margin:20px auto 15px; }
+	.detail-pic-box .small-pic-list { width:430px; text-align:center; }
+	.detail-pic-box .small-pic-list a { display:inline-block; width:60px; height:60px; margin:0 2px; border:3px solid #FFF; border-radius:60px; overflow:hidden; -webkit-transition:border-color .2s; -moz-transition:border-color .2s; -ms-transition:border-color .2s; -o-transition:border-color .2s; transition:border-color .2s; }
+	.detail-pic-box .small-pic-list a:hover, .detail-pic-box .small-pic-list .current { border-color:#99C5A6; }
+/*=e pic */
+/*=s info */
+	.detail-info-box { width:290px; margin-right:20px; }
+	.detail-info-box .pro-name { display:block; height:80px; margin:10px 20px 15px; font-size:18px; overflow:hidden; }
+	.detail-info-box .other-pro-info { margin:0 20px; font-size:12px; color:#666; }
+	.detail-info-box .other-pro-info li { margin-bottom:5px; padding-left:24px; }
+	.detail-info-box .other-pro-info dfn { margin:0 3px 0 10px; }
+	.detail-info-box .price-box { margin:0 20px 10px; font-size:26px; color:#FF9A00; }
+	.detail-info-box .main-button { width:150px; height:40px; margin-left:20px; line-height:40px; font-size:18px; }
+/*=e info */
+/*=s shop */
+	.detail-shop-box { width:200px; color:#666; }
+	.detail-shop-box .shop-name { display:block; margin:10px 20px; color:#666; }
+	.detail-shop-box .trust-rank { height:16px; margin:0 20px 24px; }
+	.detail-shop-box .scores { margin:0 20px 6px; font-size:12px; color:#999; }
+	.detail-shop-box .other-shop-info { margin:30px 20px 20px; font-size:12px; line-height:2; color:#999; }
+	.detail-shop-box .sub-button { width:150px; height:40px; margin-left:20px; line-height:40px; font-size:18px; }
+/*=e shop */
+/* Detail Box End */
+
+/* Recommend Begin */
+.pro-recommend { width:960px; margin:0 auto; }
+.pro-recommend .title { margin-bottom:10px; font-size:16px; }
+/* Recommend End */

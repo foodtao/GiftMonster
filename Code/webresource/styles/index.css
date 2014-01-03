@@ -1,0 +1,63 @@
+/* Structure Begin */
+.ad-reminder-wrapper, .product-wrapper { width:960px; margin:0 auto; }
+.ad-reminder-wrapper { height:300px; margin-bottom:30px; }
+.product-wrapper { width:940px; margin-bottom:20px; padding:10px; background-color:#FFF; }
+/* Structure End */
+
+/* Advertise & Reminder Begin */
+.reminder-box { width:605px; height:265px; padding:35px 0 0 30px; font-family:"Microsoft Yahei", Simsun, sans-serif; background:url(../images/ad_mask.png); }
+.holiday-name { margin-bottom:25px; font-size:18px; }
+.holiday-name h2 { display:inline; margin:0 20px; font-size:24px; font-family:"Microsoft Yahei", Simsun, sans-serif; }
+.holiday-timer { margin-bottom:45px; *zoom:1; }
+.holiday-timer:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.holiday-timer .dash { position:relative; float:left; width:80px; height:70px; margin-right:20px; padding-top:10px; text-align:center; font-size:12px; color:#FFF; background-color:#7D7B57; background-color:rgba(51, 51, 51, .6); *zoom:1; }
+.holiday-timer .digit { display:inline-block; height:38px; vertical-align:middle; font:30px Calibri, Tahoma, Arial, sans-serif; }
+.holiday-timer .dash-title { position:absolute; bottom:12px; left:50%; width:48px; margin-left:-24px; text-align:center; }
+.reminder-box .text-gray { margin-bottom:10px; }
+.rec-choice a { font-size:18px; margin-right:20px; color:#666; }
+.rec-choice a:hover { color:#439354; }
+/* Advertise & Reminder End */
+
+/* Product Display Begin */
+.product-wrapper h3 { margin-bottom:5px; font:14px "Microsoft Yahei", Simsun, sans-serif; color:#439354; }
+.display-panel { *zoom:1; }
+.display-panel:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+/*=s hot sale */
+	.detail-product { *position:relative; float:left; width:460px; height:290px; overflow:hidden; *zoom:1; }
+	.detail-product-list { width:10000px; *zoom:1; }
+	.detail-product-list:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+	.detail-pro { position:relative; float:left; width:450px; height:290px; margin-right:10px; padding-left:10px; text-align:right; background-color:#EFFBF3; }
+	.detail-pro img { float:right; margin-left:10px; }
+	.detail-pro .rank { margin-bottom:15px; padding-top:10px; color:#999; }
+	.detail-pro em { font-size:24px; font-style:normal; }
+	.detail-pro .product-name { display:block; height:64px; margin-bottom:20px; font-family:Calibri, "Microsoft Yahei", Simsun, sans-serif; overflow:hidden; }
+	.detail-pro .d-price { margin-bottom:15px; font-size:30px; color:#F69907; }
+	.detail-pro .main-button { float:right; width:130px; height:38px; line-height:38px; }
+	.detail-pro .icon-mark { position:absolute; right:300px; bottom:20px; }
+
+	.simple-product { float:left; width:480px; height:300px; margin-top:-10px; overflow:hidden; }
+	.simple-pro { position:relative; float:left; width:110px; height:140px; margin:10px 0 0 10px; text-align:center; background-color:#EFFBF3; }
+	.simple-pro img { display:block; margin-bottom:5px; }
+	.simple-pro .mask { position:absolute; top:0; left:0; width:110px; height:140px; background-color:#EFFBF3; }
+/*=e hot sale */
+/*=s recommend */
+	.recommend .display-panel { margin-left:-10px; }
+	.rec-product { position:relative; float:left; width:180px; height:180px; margin-left:10px; overflow:hidden; }
+	.rec-product .front, .rec-product .back { position:absolute; top:0; left:0; width:180px; height:180px; -webkit-backface-visibility:hidden; -webkit-transition:all .4s ease-in-out; -moz-transition:all .4s ease-in-out; -ms-transition:all .4s ease-in-out; -o-transition:all .4s ease-in-out; transition:all .4s ease-in-out; }
+	.rec-product .front { width:160px; height:170px; padding:5px 10px; background-color:#EFFBF3; -webkit-transform:rotatey(180deg); -ms-transform:rotatey(180deg); -moz-transform:rotatey(180deg); -o-transform:rotatey(180deg); transform:rotatey(180deg); }
+	.rec-product .product-name { display:block; height:64px; margin-bottom:5px; font-family:"Microsoft Yahei", Simsun, sans-serif; overflow:hidden; }
+	.rec-product .r-price { margin-bottom:5px; font-size:18px; color:#F69907; }
+	.rec-product .main-button, .rec-product .sub-button { display:block; width:160px; height:30px; margin-bottom:5px; font-size:14px; line-height:30px; }
+	.rec-product:hover .back { z-index:2; cursor:pointer; -webkit-transform:rotatey(180deg); -ms-transform:rotatey(180deg); -moz-transform:rotatey(180deg); -o-transform:rotatey(180deg); transform:rotatey(180deg); }
+	.rec-product:hover .front { z-index:3; -webkit-transform:rotatey(0); -ms-transform:rotatey(0); -moz-transform:rotatey(0); -o-transform:rotatey(0); transform:rotatey(0); }
+	.rec-product .front { margin-left:-180px\9; }
+/*=e recommend */
+/*=s shop */
+	.shop .display-panel { margin-left:-10px; }
+	.shop-product { float:left; width:180px; height:280px; margin-left:10px; background-color:#EFFBF3; }
+	.shop-product img { display:block; margin-bottom:5px; }
+	.shop-product .shop-name { display:block; margin:0 10px 10px; font-family:Calibri, "Microsoft Yahei", Simsun, sans-serif; color:#666; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+	.shop-product .shop-name:hover { color:#439355; }
+	.shop-product .scores { margin:0 10px 5px; font:12px Calibri, "Microsoft Yahei", Simsun, sans-serif; color:#999; }
+/*=e shop */
+/* Product Display End */

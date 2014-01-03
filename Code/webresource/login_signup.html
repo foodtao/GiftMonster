@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" href="styles/common.css" />
+<link rel="stylesheet" href="styles/login-signup.css" />
+</head>
+<body>
+<div class="header" id="header">
+	<h1><a href="javascript:;" title="礼物怪兽"><img src="images/logo.png" alt="礼物怪兽"></a></h1>
+</div>
+<div class="login-signup-wrapper">
+	<img src="images/login-signup.png" alt="" />
+	<div class="login-signup-box">
+		<div class="login-box">
+			<table class="tb-form" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td><b class="icon-email"></b><input type="text" class="icon-text" placeholder="邮箱" /></td>
+				</tr>
+				<tr>
+					<td><b class="icon-password"></b><input type="text" class="icon-text" placeholder="密码" /></td>
+				</tr>
+				<tr>
+					<td>
+						<a href="javascript:;" class="float-right pw-forgotten">忘记密码？</a>
+						<span class="base-txtsilver">记住用户名和密码</span>
+						<label><input type="checkbox" class="switch" checked="checked" /><span class="check-container"><b></b></span><span class="check-button"></span></label>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="登&nbsp;&nbsp;录" class="main-button" /></td>
+				</tr>
+			</table>
+			<div class="go-elsewhere">
+				还没有礼物怪兽的账号？赶快 <a href="javascript:;" class="go-signup">注册 <b class="icon-next"></b></a>
+			</div>
+		</div>
+		<div class="signup-box">
+			<table class="tb-form" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td><b class="icon-email"></b><input type="text" class="icon-text" placeholder="邮箱" /></td>
+				</tr>
+				<tr>
+					<td><b class="icon-name"></b><input type="text" class="icon-text" placeholder="昵称" /></td>
+				</tr>
+				<tr>
+					<td><b class="icon-password"></b><input type="text" class="icon-text" placeholder="密码" /></td>
+				</tr>
+				<tr>
+					<td><b class="icon-password"></b><input type="text" class="icon-text" placeholder="请再次输入密码" /></td>
+				</tr>
+				<tr style="display:none;">
+					<td><b class="icon-gender"></b>
+						<span class="check-options">男</span>
+						<label><input type="checkbox" class="switch" checked="checked"><span class="check-container"><b></b></span><span class="check-button"></span></label>
+						<span class="check-options">女</span>
+					</td>
+				</tr>
+				<tr style="display:none;">
+					<td><b class="icon-birth"></b><input type="text" class="icon-text" placeholder="出生日期" /></td>
+				</tr>
+				<tr style="display:none;">
+					<td><b class="icon-constellation"></b><input type="text" class="icon-text" placeholder="星座" /></td>
+				</tr>
+				<tr>
+					<td><a href="javascript:;" class="float-right more-info">编辑详细资料 <b class="icon-arrow-right"></b></a></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="注&nbsp;&nbsp;册" class="main-button" /></td>
+				</tr>
+			</table>
+			<div class="go-elsewhere">
+				已经有礼物怪兽的账号？赶快 <a href="javascript:;" class="go-login">登录 <b class="icon-prev"></b></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<img src="images/footer.png" alt="" />
+	<span class="float-right">礼物怪兽</span>
+	Copyright© 2013, li5tao.com. All rights reserved.
+</div>
+<div class="popup-window pw" style="display:none;">
+	<div class="popup-hd"><b class="icon-password"></b><a href="javascript:;" class="close" title="关闭"></a></div>
+	<div class="popup-bd">
+		<table class="tb-form" cellspacing="0" cellpadding="0" width="100%">
+			<tr>
+				<td><b class="icon-email"></b><input type="text" class="icon-text" placeholder="邮箱" /></td>
+			</tr>
+			<tr>
+				<td><b class="icon-validation"></b><input type="text" class="icon-text" placeholder="验证码" /><img src="images/validate.jpg" alt="" class="pic-valid" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="获取验证地址" class="sub-button" /></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="popup-window pw" style="display:none;">
+	<div class="popup-hd"><b class="icon-password"></b><a href="javascript:;" class="close" title="关闭"></a></div>
+	<div class="popup-bd">
+		<p class="text-center">验证地址已发送至您的邮箱，请注意查收。</p>
+		<a href="###" class="sub-button">去我的邮箱验证</a>
+	</div>
+</div>
+<div class="bd-mask"></div>
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scale.js"></script>
+<script type="text/javascript" src="scripts/login-signup.js"></script>
+</body>
+</html>

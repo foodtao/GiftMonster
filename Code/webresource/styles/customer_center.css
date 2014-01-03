@@ -1,0 +1,109 @@
+.user-wrapper { position:relative; width:960px; height:920px; margin:0 auto; }
+.boxes { position:absolute; border-radius:5px; background-color:#FFF; }
+.page-box { position:absolute; bottom:4px; left:50%; width:100px; margin-left:-50px; text-align:center; }
+/* Personal */
+.personal-box { top:0; left:0; width:180px; height:128px; margin-top:60px; padding:90px 30px 0; text-align:center; }
+.personal-box img { position:absolute; width:120px; height:120px; top:-60px; left:50%; margin-left:-60px; border-radius:120px; }
+.personal-box strong { display:inline-block; position:relative; max-width:160px; max-height:64px; margin-bottom:5px; font-weight:normal; }
+.personal-box strong:before, .personal-box strong:after { content:'—'; position:absolute; top:-2px; left:-20px; color:#CCC; }
+.personal-box strong:after { left:auto; right:-20px; margin-left:0; }
+.personal-box .text-silver { display:block; margin-bottom:20px; font-size:12px; }
+.personal-box .sub-button { width:164px; height:40px; line-height:40px; font-size:12px; }
+
+/* Recommend */
+.rec-box { left:280px; top:0; width:632px; height:336px; margin-top:40px; padding:12px 24px; border-top-left-radius:0; }
+.rec-box .rec-tab { position:absolute; top:-40px; left:0; background-color:#99C5A6; border-radius:5px 5px 0 0; overflow:hidden; }
+.rec-box .rec-tab a { float:left; width:80px; height:40px; }
+.rec-box .rec-tab a:hover { background-color:#439354; }
+.rec-box .rec-tab b { margin:12px auto; }
+.rec-box .rec-tab .icon-mark { background-position:0 -880px; }
+.rec-box .rec-tab .current, .rec-box .rec-tab .current:hover { background-color:#FFF; cursor:default; }
+.rec-box .rec-tab .current .icon-mark { background-position:0 0; }
+.rec-box .rec-tab .current .icon-gift { background-position:0 -912px; }
+
+.rec-box .rec-search-form { height:34px; margin-bottom:10px; }
+.rec-box .icon-text, .holiday-box .icon-text, .popup-window .icon-text { width:150px; height:24px; margin-left:40px; font-size:12px; line-height:24px; border-width:2px; border-left:0 none; }
+.holiday-box .icon-text { width:168px; }
+.rec-box .rec-list { margin-left:-24px; *zoom:1; }
+.rec-box .rec-list:after {clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.rec-box .rec-list li { float:left; width:140px; height:270px; margin-left:24px; background-color:#EFFBF3; }
+.rec-box .p-name { display:block; max-height:54px; margin:0 10px; font-size:12px; overflow:hidden; }
+.rec-box .price-box { margin:0 10px; font-size:18px; color:#F69906; }
+.rec-box .main-button { display:block; width:120px; height:30px; margin:0 auto; line-height:30px; font-size:12px; }
+.rec-box .icon-prev, .rec-box .icon-next, .holiday-box .icon-prev, .holiday-box .icon-next { position:static; display:inline-block; margin:0 10px; background-position:0 -1008px; }
+.rec-box .icon-next, .holiday-box .icon-next { background-position:0 -1040px; }
+.rec-box .icon-prev:hover, .holiday-box .icon-prev:hover { background-position:0 -688px; }
+.rec-box .icon-next:hover, .holiday-box .icon-next:hover { background-position:0 -720px; }
+
+/* Holiday */
+.holiday-box { left:0; top:318px; width:240px; height:326px; font-size:12px; }
+.holiday-box .icon-title { border-radius:5px 5px 0 0; }
+.tb-holiday { table-layout:fixed; margin-bottom:5px; }
+.holiday-box .holiday-name { display:block; width:105px; padding:1px 0 1px 4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.holiday-box .holiday-date { padding:1px 0 1px 4px; font-family:Calibri; }
+.tb-holiday th, .tb-holiday td { padding:6px 0 0 10px; vertical-align:middle; }
+.tb-holiday th { text-align:center; }
+.tb-holiday i { display:inline-block; width:8px; height:8px; border-radius:8px; background-color:#99C5A6; }
+.holiday-box .page-box { position:static; width:100%; margin:0; }
+.holiday-box .text-silver { margin:0 10px 5px 10px; }
+.holiday-box .tb-form { margin:0 10px; }
+.holiday-box .tb-form td { padding-bottom:10px; }
+.holiday-box .sub-button { width:220px; font-size:12px; }
+.holiday-box .input-text { width:100px; height:20px; padding:0 3px; line-height:20px; border:1px solid #CCC; border-radius:0; }
+.tb-holiday .sub-button { width:40px; height:24px; line-height:24px; }
+
+/* Calendar */
+.calendar-box { left:280px; top:440px; width:236px; height:204px; text-align:center; background-color:#99C5A6; color:#FFF; }
+.calendar-box p { margin:10px 0; }
+.tb-calendar { width:216px; margin:0 10px; }
+.tb-calendar th { font:normal 12px Calibri; }
+.tb-calendar td { padding:1px 0; }
+
+/* Time */
+.time-box { left:556px; top:440px; width:234px; height:204px; }
+.time-box .icon-title-w { height:40px; margin-bottom:20px; text-align:center; }
+.time-box .text-gray { display:block; text-align:center; font:normal 48px Calibri; }
+.time-box .text-gray span { margin-left:10px; font-size:12px; }
+.time-box .text-silver { position:absolute; right:10px; bottom:10px; text-align:right; font-size:12px; }
+
+/* Share */
+.share-box { left:830px; top:440px; width:130px; height:204px; background-color:transparent; }
+.share-box a { position:absolute; width:45px; height:45px; text-align:center; background-color:#99C5A6; border-radius:45px; }
+.share-box a:hover { background-color:#439354; }
+.share-box a b { margin-top:15px; }
+.share-box .survey-link { width:130px; height:44px; border-radius:5px; }
+.share-box .survey-link b { margin-top:13px; }
+
+/* Timeline */
+.time-wrapper i, .icon-l-heart, .icon-l-star, .icon-l-diamond, .icon-l-crown, .icon-l-camera { background:url(../images/un_c_icon.png) no-repeat; }
+.timeline-box { left:0; top:684px; width:960px; height:250px; background-color:transparent; border-radius:0; }
+.timeline-box .decos { position:absolute; width:16px; height:16px; margin-top:106px; background-color:#CCC; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); -ms-transform:rotate(45deg); -o-transform:rotate(45deg); transform:rotate(45deg); }
+.timeline-box .decos.front { left:3px; }
+.timeline-box .decos.back { right:3px; }
+.timeline-box .text-silver { position:absolute; top:130px; font-size:18px; color:#CCC; }
+.time-wrapper { position:relative; width:940px; height:8px; margin:110px auto 0; background-color:#CCC; }
+.time-wrapper li { position:absolute; width:60px; height:190px; }
+.time-wrapper i { position:absolute; width:60px; height:40px; }
+.time-wrapper em { position:absolute; width:10px; height:15px; margin-left:25px; background-color:#CCC; }
+.time-wrapper .text-gray { position:absolute; left:0; width:60px; text-align:center; font-size:12px; }
+.icon-l-heart, .icon-l-star, .icon-l-diamond, .icon-l-crown, .icon-l-camera { position:absolute; width:60px; height:60px; background-position:0 -40px; }
+.icon-l-star { background-position:0 -100px; }
+.icon-l-diamond { background-position:0 -160px; }
+.icon-l-crown { background-position:0 -220px; }
+.icon-l-camera { background-position:0 -280px; }
+.odd { top:-110px; }
+.even { bottom:-110px; }
+.odd i { top:94px; }
+.even i { bottom:94px; } 
+.odd em { top:70px; }
+.even em { bottom:70px; }
+.odd b { top:0; }
+.even b { bottom:0; }
+.odd .text-gray { bottom:0; }
+
+/* Popup */
+.pic-upload-box { position:relative; width:120px; height:120px; margin:0 auto 20px; border-radius:120px; overflow:hidden; }
+.pic-upload-box .pic-upload { display:none; position:absolute; left:0; top:0; width:120px; height:120px; font:normal 12px/120px "Microsoft Yahei"; text-align:center; border-radius:120px; background-color:#333; opacity:.6; color:#FFF; }
+.pic-upload-box:hover .pic-upload { display:block; }
+.pi .icon-email, .pi .icon-name, .pi .icon-birth, .pi .icon-gender { padding-right:12px; }
+.pi .icon-text { width: }

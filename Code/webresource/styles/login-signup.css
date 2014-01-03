@@ -1,0 +1,26 @@
+.login-signup-wrapper { position:relative; width:960px; height:470px; margin:70px auto 0; }
+.login-signup-wrapper img { position:absolute; left:60px; top:40px; }
+.login-signup-box { position:absolute; left:550px; width:360px; height:470px; overflow:hidden; }
+.login-box, .signup-box { position:absolute; left:0; top:0; width:360px; background-color:#FFF; }
+.signup-box { left:360px; opacity:0; }
+.login-signup-box .tb-form { width:280px; margin:30px auto; font-size:12px; }
+.login-signup-box .tb-form td { padding:10px 0; }
+.login-signup-box .tb-form .base-txtsilver { display:inline-block; height:17px; margin-right:5px; vertical-align:middle; }
+.login-signup-box .main-button { width:100%; height:40px; }
+.go-elsewhere { height:60px; padding:0 40px; line-height:60px; background-color:#99C5A6; color:#FFF; }
+.go-elsewhere a { position:relative; margin-left:5px; font-size:18px; color:#FFF; }
+.go-elsewhere a:hover { color:#439354; }
+.go-elsewhere a:hover .icon-next { background-position:0 -720px; }
+.go-elsewhere a:hover .icon-prev { background-position:0 -688px; }
+.signup-box .float-right { position:relative; padding-right:10px; }
+.signup-box .float-right:hover .icon-arrow-right { background-position:-6px -752px; }
+.signup-box .float-right:hover .icon-arrow-left { background-position:-6px -784px; }
+.signup-box .icon-gender { display:inline-block; position:static; padding-right:12px; vertical-align:middle; }
+.signup-box label { display:inline-block; }
+.signup-box .check-options { margin:0 5px; vertical-align:middle; }
+
+.popup-hd .icon-password { display:inline-block; position:static; padding:12px 0; background-color:transparent; background-position:0 -420px; }
+.popup-bd .tb-form td { padding:10px 0; }
+.popup-bd .sub-button { width:100%; height:40px; line-height:40px; }
+.popup-bd .text-center { margin-bottom:20px; }
+.popup-bd .text-center .sub-button { width:100px; height:30px; margin:0 10px; line-height:30px; }
