@@ -24,3 +24,12 @@
 .popup-bd .sub-button { width:100%; height:40px; line-height:40px; }
 .popup-bd .text-center { margin-bottom:20px; }
 .popup-bd .text-center .sub-button { width:100px; height:30px; margin:0 10px; line-height:30px; }
+
+.popup-date-selector { position:absolute; padding:5px; background-color:#99C5A6; *zoom:1; }
+.popup-date-selector:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.popup-date-selector ul { float:left; width:80px; text-align:center; line-height:2; background-color:#FFF; border-radius:5px; color:#CCC; }
+.popup-date-selector li:hover { color:#666; cursor:pointer; }
+.popup-date-selector .current, .popup-date-selector .current:hover { color:#333; cursor:default; }
+.popup-date-selector .year-list { height:336px; margin-right:5px; overflow-y:scroll; }
+.popup-date-selector .month-list { margin-right:5px; }
+.popup-date-selector .day-list { height:336px; overflow-y:scroll; }

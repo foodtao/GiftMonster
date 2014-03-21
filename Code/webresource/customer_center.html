@@ -24,7 +24,7 @@
 <div class="go-top">
 	<a href="javascript:;" class="icon-go-top"><b></b></a>
 </div>
-<div class="assortment">
+<div class="assortment" style="display:none;">
 	<a href="javascript:;" class="btn-assortment"><span>礼物分类</span></a>
 	<div class="assortment-list">
 		<div class="title">全部礼物分类</div>
@@ -904,23 +904,28 @@
 	<div class="popup-bd">
 		<table class="tb-form" cellspacing="0" cellpadding="0" width="100%">
 			<tr>
-				<div class="pic-upload-box">
-					<img src="images/zzz_120120.jpg" alt="" />
-					<a href="###" class="pic-upload">上传头像</a>
-				</div>
+				<td>
+					<div class="pic-upload-box">
+						<img src="images/no_portrait.png" alt="" />
+						<a href="javascript:;" class="pic-upload">上传头像</a>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>
 					<b class="icon-name"></b><input type="text" class="icon-text" placeholder="昵称" />
-					<a href="###" class="base-silver">忘记密码？</a>
+					<a href="javascript:;" class="text-silver">忘记密码？</a>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<b class="icon-gender"></b>
-					<span class="check-options">男</span>
-					<label><input type="checkbox" class="switch" checked="checked"><span class="check-container"><b></b></span><span class="check-button"></span></label>
-					<span class="check-options">女</span>
+					<div class="gender-wrapper">
+						<span class="check-options">男</span>
+						<label><input type="checkbox" class="switch" checked="checked"><span class="check-container"><b></b></span><span class="check-button"></span></label>
+						<span class="check-options">女</span>
+					</div>
+					
 				</td>
 			</tr>
 			<tr>
@@ -931,7 +936,7 @@
 			</tr>
 			<tr>
 				<td>
-					<b class="icon-textarea"></b><textarea name="" id=""></textarea>
+					<b class="icon-textarea"><i></i></b><textarea name="" id="" placeholder="个性签名"></textarea>
 				</td>
 			</tr>
 			<tr>
@@ -940,43 +945,130 @@
 		</table>
 	</div>
 </div>
-<div class="popup-window pw" style="display:;">
+<div class="popup-window xz">
+	<div class="popup-bd">
+		<a href="javascript:;">白羊座</a>
+		<a href="javascript:;">金牛座</a>
+		<a href="javascript:;">双子座</a>
+		<a href="javascript:;">巨蟹座</a>
+		<a href="javascript:;">狮子座</a>
+		<a href="javascript:;">处女座</a>
+		<a href="javascript:;">天秤座</a>
+		<a href="javascript:;">天蝎座</a>
+		<a href="javascript:;">射手座</a>
+		<a href="javascript:;">摩羯座</a>
+		<a href="javascript:;">双鱼座</a>
+		<a href="javascript:;">水瓶座</a>
+	</div>
+</div>
+<div class="popup-window sv" style="display:;">
 	<div class="popup-hd"><b class="icon-survey"></b><a href="javascript:;" class="close" title="关闭"></a></div>
 	<div class="popup-bd">
 		<div class="col-left">
 			<p class="module-title">实用性</p>
-			<div class="score-module">
-				<a href="###"></a>
-				<a href="###"></a>
-				<a href="###" class="current">3</a>
-				<a href="###"></a>
-				<a href="###"></a>
+			<div class="score-wrapper">
+				<div class="score-module">
+					<a href="javascript:;">1</a>
+					<a href="javascript:;">2</a>
+					<a href="javascript:;" class="current">3</a>
+					<a href="javascript:;">4</a>
+					<a href="javascript:;">5</a>
+				</div>
 			</div>
 			<p class="module-title">美观性</p>
-			<div class="score-module">
-				<a href="###"></a>
-				<a href="###"></a>
-				<a href="###" class="current">3</a>
-				<a href="###"></a>
-				<a href="###"></a>
+			<div class="score-wrapper">
+				<div class="score-module">
+					<a href="javascript:;">1</a>
+					<a href="javascript:;">2</a>
+					<a href="javascript:;" class="current">3</a>
+					<a href="javascript:;">4</a>
+					<a href="javascript:;">5</a>
+				</div>
 			</div>
 			<p class="module-title">意见&amp;建议</p>
-			<b class="icon-textarea"></b><textarea name="" id=""></textarea>
+			<b class="icon-textarea"><i></i></b><textarea name="" id="" placeholder="意见与建议..."></textarea>
 		</div>
 		<div class="col-right">
 			<p class="module-title">希望增加的功能</p>
 			<ul class="func-list">
-				<li><i></i>礼物DIY教程</li>
-				<li><i></i>按人物性格搜索礼物</li>
-				<li><i></i>个人中心换肤</li>
-				<li><i></i>个人中心相册模块</li>
-				<li><i></i>轻博客</li>
-				<li><i></i>讨论区</li>
+				<li><i></i><a href="javascript:;">礼物DIY教程</a></li>
+				<li><i></i><a href="javascript:;" class="current">按人物性格搜索礼物</a></li>
+				<li><i></i><a href="javascript:;">个人中心换肤</a></li>
+				<li><i></i><a href="javascript:;">个人中心相册模块</a></li>
+				<li><i></i><a href="javascript:;">轻博客</a></li>
+				<li><i></i><a href="javascript:;">讨论区</a></li>
 			</ul>
-			<b class="icon-textarea"></b><textarea name="" id=""></textarea>
+			<b class="icon-textarea"><i></i></b><textarea name="" id="" placeholder="其他希望增加的功能..."></textarea>
 			<input type="button" value="提&nbsp;&nbsp;交" class="sub-button" />
 		</div>
 	</div>
+</div>
+<div class="popup-date-selector">
+	<ul class="year-list">
+		<li>1981</li>
+		<li>1982</li>
+		<li>1983</li>
+		<li>1984</li>
+		<li>1985</li>
+		<li class="current">1986</li>
+		<li>1987</li>
+		<li>1988</li>
+		<li>1989</li>
+		<li>1990</li>
+		<li>1991</li>
+		<li>1992</li>
+		<li>1993</li>
+		<li>1994</li>
+		<li>1995</li>
+		<li>1996</li>
+	</ul>
+	<ul class="month-list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li class="current">6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+		<li>11</li>
+		<li>12</li>
+	</ul>
+	<ul class="day-list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+		<li>11</li>
+		<li>12</li>
+		<li>13</li>
+		<li>14</li>
+		<li>15</li>
+		<li>16</li>
+		<li class="current">17</li>
+		<li>18</li>
+		<li>19</li>
+		<li>20</li>
+		<li>21</li>
+		<li>22</li>
+		<li>23</li>
+		<li>24</li>
+		<li>25</li>
+		<li>26</li>
+		<li>27</li>
+		<li>28</li>
+		<li>29</li>
+		<li>30</li>
+		<li>31</li>
+	</ul>
 </div>
 <div class="bd-mask"></div>
 <script type="text/javascript" src="scripts/jquery.min.js"></script>

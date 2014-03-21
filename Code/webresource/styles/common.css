@@ -4,6 +4,7 @@ html { background-color:#EFEFEF; }
 body { background-color:#EFEFEF; font-size:14px; line-height:1.5; font-family:Calibri, "Microsoft Yahei", Simsun, sans-serif; *font-family:"Microsoft Yahei", sans-serif; color:#333; }
 img, fieldset { margin:0; padding:0; border:0; }
 input, textarea { font-size:12px; font-family:Calibri, "Microsoft Yahei", Simsun, sans-serif; font-family:"Microsoft Yahei", Calibri, sans-serif\9; }
+textarea { resize:none; }
 table { border-collapse:collapse; }
 th, td { vertical-align:top; }
 a { color:#333; text-decoration:none; outline:none; }
@@ -39,7 +40,7 @@ input[type="button"],input[type="submit"]{-webkit-appearance:none;}
 .icon-title { height:40px; text-align:center; background-color:#99C5A6; }
 .pic-valid { margin-left:10px; vertical-align:middle; }
 /*=s pic */
-	.icon-mark, .scores i, .icon-detail, .icon-seller, .icon-location, .icon-transp, .icon-good, .search-list .search-price-box, .icon-email, .icon-password, .icon-name, .icon-birth, .icon-gender, .icon-constellation, .icon-next, .icon-prev, .icon-arrow-right, .icon-arrow-left, .icon-validation, .icon-gift, .icon-search, .icon-clock, .icon-h-delete, .icon-h-edit, .icon-h-name, .icon-h-date, .icon-watch, .icon-sina, .icon-tencent, .icon-renren, .icon-qzone, .icon-survey { background:url(../images/un_icon.png) no-repeat 0 0; }
+	.icon-mark, .scores i, .icon-detail, .icon-seller, .icon-location, .icon-transp, .icon-good, .search-list .search-price-box, .icon-email, .icon-password, .icon-name, .icon-birth, .icon-gender, .icon-constellation, .icon-next, .icon-prev, .icon-arrow-right, .icon-arrow-left, .icon-validation, .icon-gift, .icon-search, .icon-clock, .icon-h-delete, .icon-h-edit, .icon-h-name, .icon-h-date, .icon-watch, .icon-sina, .icon-tencent, .icon-renren, .icon-qzone, .icon-survey, .icon-textarea i, .func-list .current:after { background:url(../images/un_icon.png) no-repeat 0 0; }
 	.icon-hearts, .icon-diamonds, .icon-crowns, .icon-goldcrowns { background:url(../images/un_level.png) no-repeat 0 0; }
 /*=e pic */
 /*=s icons */
@@ -96,6 +97,8 @@ input[type="button"],input[type="submit"]{-webkit-appearance:none;}
 	.icon-renren { background-position:0 -1392px; }
 	.icon-qzone { background-position:0 -1424px; }
 	.icon-survey { height:19px; background-position:0 -1456px; }
+	.icon-textarea i { display:inline-block; width:16px; height:16px; background-position:0 -1488px; }
+	.func-list .current:after { background-position:4px -1516px; }
 /*=e icons */
 /*=s checkbox */
 	.switch { position:absolute; top:-999px; vertical-align:middle; }

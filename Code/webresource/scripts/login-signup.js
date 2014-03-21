@@ -3,6 +3,9 @@ var dWidth = $(document).width(),
 	eWidth = $(window).width(),
 	eHeight = $(window).height(),
 	pwHeight = $('.pw').height(),
+	y = 'yyyy',
+	m = 'mm',
+	d = 'dd',
 	changeBorder = function(e) {
 		switch(event.type) {
 			case 'focus': $(this).css({ 'border-color': '#99C5A6' }).prev().css({ 'background-color' : '#99C5A6' });
@@ -85,7 +88,69 @@ var dWidth = $(document).width(),
 	},
 	closePopups = function() {
 		$(this).parents('.popup-window').get(0).style.display = $('.bd-mask').get(0).style.display = 'none';
-	}
+	},
+	isChildOf = function(parentEl, el, container) {
+		if(parentEl == el) {
+			return true;
+		}
+		if(parentEl.contains) {
+			return parentEl.contains(el);
+		}
+		if(parentEl.compareDocumentPosition) {
+			return !!(parentEl.compareDocumentPosition(el) & 16);
+		}
+		var prEl = el.parentNode;
+		while(prEl && prEl != container) {
+			if (prEl == parentEl)
+				return true;
+			prEl = prEl.parentNode;
+		}
+		return false;
+	},
+	changeCurrentStyle = function(targetElement, currentClassName) {
+		var parentElement = targetElement.parentNode,
+			childrenElements = parentElement.children,
+			i;
+		for(i in childrenElements) {
+			childrenElements[i].className = '';
+		}
+		targetElement.className = currentClassName;
+	},
+	showDatePopup = function(event) {
+		var e = event || window.event,
+			target = e.target ? e.target : e.srcElement,
+			topValue = $(target).offset().top + target.offsetHeight,
+			leftValue = $(target).offset().left;
+		$('#popupDate')[0].style.top = topValue + 'px';
+		$('#popupDate')[0].style.left = leftValue + 4 + 'px';
+		$('#popupDate')[0].style.display = 'block';
+	},
+	hideDatePopup = function(event) {
+		var e = event || window.event,
+			target = e.target ? e.target : e.srcElement;
+		if(!isChildOf($('#popupDate')[0], target) && target.id != 'dateInput') {
+			$('#popupDate')[0].style.display = 'none';
+		}
+		else {
+			event.preventDefault();
+			event.returnValue = false;
+			$('#dateInput').trigger('focus');
+			if(target.nodeName.toLowerCase() == 'li') {
+				changeCurrentStyle(target, 'current');
+				var parentClassName = target.parentNode.className;
+			}
+			switch(parentClassName) {
+				case 'year-list' : y = target.innerHTML;
+									break;
+				case 'month-list' : m = target.innerHTML;
+									break;
+				case 'day-list' : d = target.innerHTML;
+									break;
+			}
+			var result = y + '-' + m + '-' + d;
+			$('#dateInput')[0].value = result == 'yyyy-mm-dd' ? '' : result;
+		}
+	};
 $('.icon-text').bind('focus blur', changeBorder);
 $('.switch').bind('click', checkBoxSwitch);
 $('.go-elsewhere a').bind('click', changeBoxPosition);
@@ -93,6 +158,11 @@ $('.more-info').bind('click', showMoreInfo);
 $('.pw-forgotten').bind('click', { pName: 'pw' }, showPopups);
 $(window).bind('resize', initPopupPosition);
 $('.close').bind('click', closePopups);
+$('#dateInput').bind('focus',showDatePopup);
+$('body').bind('mousedown',hideDatePopup);
+
+$('.go-signup').trigger('click');
+$('.more-info').trigger('click');
 /*
  Color animation 1.6.0
  http://www.bitstorm.org/jquery/color-animation/
