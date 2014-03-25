@@ -1,0 +1,23 @@
+package com.li5tao.data.collect.alimama;
+
+import org.apache.http.cookie.Cookie;
+
+/*
+ * 抓取中临时会话信息保存实体
+ */
+public class SessionEntity {
+	/*
+	 * 
+	 */
+	private Cookie[] _cookies;
+
+	public Cookie[] get_cookies() {
+		return _cookies;
+	}
+
+	public void set_cookies(Cookie[] _cookies) {
+		this._cookies = _cookies;
+	}
+	
+	
+}

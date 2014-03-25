@@ -1,0 +1,51 @@
+package com.li5tao.data.collect.alimama;
+
+import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+
+public class CollectProduct {
+	
+	public static void getProduct()
+	{
+		try{
+			Login login = new Login("food0517@163.com","tao3230517","6c346857fa701323c6055b2d0787b3f6");
+			Cookie[] cookies = login.LoginIn();
+			BasicCookieStore cookieStore = new BasicCookieStore();
+			cookieStore.addCookies(cookies);
+			CloseableHttpClient httpclient = HttpClients.custom()
+					.setDefaultCookieStore(cookieStore)
+					.build();
+			HttpGet httpget = new HttpGet("http://pub.alimama.com/index.htm");
+			CloseableHttpResponse response = httpclient.execute(httpget);
+			try{
+				String token="";
+				HttpEntity entity = response.getEntity();
+				List<Cookie> cookies1 = cookieStore.getCookies();
+				if(!cookies1.isEmpty()){
+					for(Cookie cookie : cookies1){
+						if(cookie.getName().equals("_tb_token_")){
+							token = cookie.getValue();
+							System.out.println(token);
+						}
+					}
+				}
+				
+			}finally{
+				response.close();
+			}
+		}catch(Exception e){
+			
+		}
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}

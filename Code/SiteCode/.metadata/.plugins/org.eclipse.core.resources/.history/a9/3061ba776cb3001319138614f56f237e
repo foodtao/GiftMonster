@@ -1,0 +1,15 @@
+package com.li5tao.data.collect.alimama;
+
+public class CollectProduct {
+	
+	public static void getProduct()
+	{
+		Login login = new Login("food0517@163.com","tao3230517","6c346857fa701323c6055b2d0787b3f6");
+		login.LoginIn();
+		http://pub.alimama.com/index.htm
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}

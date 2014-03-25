@@ -1,0 +1,122 @@
+package com.li5tao.data.collect.alimama;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.methods.RequestBuilder;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+
+public class Login {
+	
+	private String _username = "food0517@163.com";
+	
+	private String _password = "tao3230517";
+	
+	private String _passwordEncrypt = "6c346857fa701323c6055b2d0787b3f6";
+	
+	public Login(String username, String password,String pwdEncrypt){
+		this._username = username;
+		this._password = password;
+		this._passwordEncrypt = pwdEncrypt;
+	}
+	
+	/*
+	 * 登录方法
+	 * return:返回登录成功后的Cookie
+	 */
+	public Cookie[] LoginIn() throws Exception{
+		Cookie[] cookiesre;
+		String token = "";
+		
+		BasicCookieStore cookieStore = new BasicCookieStore();
+		CloseableHttpClient httpclient = HttpClients.custom()
+				.setDefaultCookieStore(cookieStore)
+				.build();
+		try{
+			HttpGet httpget = new HttpGet("http://www.alimama.com/index.htm");
+			CloseableHttpResponse response = httpclient.execute(httpget);
+			
+			try{
+				HttpEntity entity = response.getEntity();
+				List<Cookie> cookies = cookieStore.getCookies();
+				if(!cookies.isEmpty()){
+					for(Cookie cookie : cookies){
+						if(cookie.getName().equals("_tb_token_")){
+							token = cookie.getValue();
+							System.out.println(token);
+						}
+					}
+				}
+				
+			}finally{
+				response.close();
+			}
+			
+			HttpUriRequest login = RequestBuilder.post()
+					.setUri(new URI("http://www.alimama.com/member/minilogin_act.htm"))
+					.addParameter("_tb_token_",token)
+					.addParameter("style", "")
+					.addParameter("redirect", "")
+					.addParameter("proxy", "http%3A%2F%2Fwww.alimama.com%2Fproxy.htm")
+					.addParameter("logname", _username)
+					.addParameter("originalLogpasswd", _password)
+					.addParameter("logpasswd", _passwordEncrypt)
+					.build();
+			
+			response = httpclient.execute(login);
+			try{
+				HttpEntity entity = response.getEntity();
+				
+				List<Cookie> cookies = cookieStore.getCookies();
+				if(!cookies.isEmpty()){
+					for(Cookie cookie : cookies){
+						if(cookie.getName().equals("alimamapw")){
+							token = cookie.getValue();
+							System.out.println(token);
+						}
+					}
+				}
+				
+				BufferedReader in = new BufferedReader(new InputStreamReader(entity.getContent()));
+				StringBuffer buffer = new StringBuffer();
+				String line = "";
+				while ((line = in.readLine()) != null){
+					buffer.append(line);
+				}
+				System.out.println(buffer.toString());
+				
+			}finally{
+				response.close();
+			}
+			
+		}finally{
+			httpclient.close();
+		}
+		
+		
+		return token;
+	}
+	
+	/*
+	 * main method
+	 */
+	public static void main(String[] args){
+		try{
+			Login login = new Login("food0517@163.com","tao3230517","6c346857fa701323c6055b2d0787b3f6");
+			login.LoginIn();
+		}catch(Exception e){
+			
+		}
+	}
+}

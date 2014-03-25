@@ -1,0 +1,7 @@
+package com.li5tao.data.collect.alimama;
+
+public class CollectProduct {
+	public static void main(String[] args){
+		
+	}
+}

@@ -1,0 +1,60 @@
+package com.li5tao.data.collect.alimama;
+
+import org.apache.http.cookie.Cookie;
+
+/*
+ * 抓取中临时会话信息保存实体
+ */
+public class SessionEntity {
+	/*
+	 * 登录成功后得到的cookie。
+	 */
+	private static Cookie[] _cookies;
+	
+	/*
+	 * 抓取信息时所用的token
+	 */
+	private static String _token = "";
+	
+	/*
+	 * 抓取信息时所用的t参数
+	 */
+	private static String _t = "";
+	
+	/*
+	 * 是否登录成功
+	 */
+	private static boolean _isLogined = false;
+
+	public Cookie[] get_cookies() {
+		return _cookies;
+	}
+
+	public String get_token() {
+		return _token;
+	}
+
+	public String get_t() {
+		return _t;
+	}
+
+	public boolean is_isLogined() {
+		return _isLogined;
+	}
+
+	/*
+	 * 登录成功后设置。
+	 */
+	public static void setLogin(Cookie[] cookies, boolean isLogin){
+		_cookies = cookies;
+		_isLogined = isLogin;
+	}
+	
+	public static void setVisitIndexAfterLogined(Cookie[] cookies,String token, String t){
+		_cookies = cookies;
+		_token = token;
+	}
+	
+	
+	
+}
