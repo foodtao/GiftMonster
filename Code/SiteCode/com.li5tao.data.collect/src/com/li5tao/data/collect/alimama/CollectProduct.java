@@ -21,44 +21,19 @@ public class CollectProduct {
 		try{
 			String token="";
 			String t = "";
-			Login login = new Login("food0517@163.com","tao3230517","6c346857fa701323c6055b2d0787b3f6");
-			Cookie[] cookies = login.LoginIn();
+			
+			SessionInfo sessionInfo = SessionManager.getSessionInfo();
+			t = sessionInfo.get_t();
+			token = sessionInfo.get_token();
+			
 			BasicCookieStore cookieStore = new BasicCookieStore();
-			cookieStore.addCookies(cookies);
+			cookieStore.addCookies(sessionInfo.get_cookies());
 			CloseableHttpClient httpclient = HttpClients.custom()
 					.setDefaultCookieStore(cookieStore)
 					.build();
-			HttpGet httpget = new HttpGet("http://pub.alimama.com/index.htm");
-			CloseableHttpResponse response = httpclient.execute(httpget);
-			try{
-				HttpEntity entity = response.getEntity();
-				List<Cookie> cookies1 = cookieStore.getCookies();
-				if(!cookies1.isEmpty()){
-					for(Cookie cookie : cookies1){
-						if(cookie.getName().equals("_tb_token_")){
-							token = cookie.getValue();
-							System.out.println(token);
-						}
-						else if(cookie.getName().equals("t")){
-							t = cookie.getValue();
-						}
-					}
-				}
-				
-				BufferedReader in = new BufferedReader(new InputStreamReader(entity.getContent(),"utf-8"));
-				   StringBuffer buffer = new StringBuffer();
-				   String line = "";
-				   while ((line = in.readLine()) != null){
-				     buffer.append(line);
-				   }
-				   System.out.println(buffer.toString());
-				
-			}finally{
-				response.close();
-			}
 			
-			httpget =  new HttpGet("http://pub.alimama.com/pubauc/searchAuctionList.json?spm=0.0.0.0.nBjKHW&q=%E6%89%8B%E6%9C%BA&t="+t+"&_tb_token_="+token+"&_input_charset=utf-8");
-			response = httpclient.execute(httpget);
+			HttpGet httpget =  new HttpGet("http://pub.alimama.com/pubauc/searchAuctionList.json?spm=0.0.0.0.nBjKHW&q=%E6%89%8B%E6%9C%BA&t="+t+"&_tb_token_="+token+"&_input_charset=utf-8");
+			CloseableHttpResponse response = httpclient.execute(httpget);
 			try{
 				HttpEntity entity = response.getEntity();
 				BufferedReader in = new BufferedReader(new InputStreamReader(entity.getContent(),"utf-8"));

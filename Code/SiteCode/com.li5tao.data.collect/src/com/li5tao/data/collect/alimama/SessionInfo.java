@@ -1,5 +1,7 @@
 package com.li5tao.data.collect.alimama;
 
+import java.util.Date;
+
 import org.apache.http.cookie.Cookie;
 
 /*
@@ -20,6 +22,11 @@ public class SessionInfo {
 	 * 抓取信息时所用的t参数
 	 */
 	private String _t = "";
+	
+	/*
+	 * 最后更新时间
+	 */
+	private Date _lastModifyDate;
 	
 	public Cookie[] get_cookies() {
 		return _cookies;
@@ -43,6 +50,14 @@ public class SessionInfo {
 
 	public void set_t(String _t) {
 		this._t = _t;
+	}
+
+	public Date get_lastModifyDate() {
+		return _lastModifyDate;
+	}
+
+	public void set_lastModifyDate(Date _lastModifyDate) {
+		this._lastModifyDate = _lastModifyDate;
 	}
 
 	

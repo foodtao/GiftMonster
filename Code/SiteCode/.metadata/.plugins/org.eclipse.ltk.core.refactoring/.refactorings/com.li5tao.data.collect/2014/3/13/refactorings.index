@@ -6,3 +6,5 @@
 1395758045559	Encapsulate field '_cookies'
 1395758051521	Encapsulate field '_token'
 1395758056034	Encapsulate field '_t'
+1395823083896	Rename type 'Login'
+1395823405583	Encapsulate field '_lastModifyDate'
